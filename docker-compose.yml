@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  web:
+    build: .
+    stdin_open: true
+    tty: true
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - TZ=Europe/Berlin
+      - RUBYOPT=--yjit
+      - SECRET_KEY_BASE=xxx
+      - RAILS_ENV=production
